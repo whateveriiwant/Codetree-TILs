@@ -1,6 +1,3 @@
-const input = require("fs").readFileSync(0).toString().trim().split("\n");
+const [s, t] = require("fs").readFileSync(0).toString().trim().split("\n").map(String);
 
-const [s, t] = input.map(String);
-
-console.log(t);
-console.log(s);
+console.log(`${t}\n${s}`);
