@@ -1,4 +1,4 @@
-const input = require("fs").readFileSync(0).toString().split("\n");
+const input = require("fs").readFileSync(0).toString().split("\n"); // 두 줄 이상 받을 때는 항상 이렇게
 
 const a = Number(input[0]);
 
