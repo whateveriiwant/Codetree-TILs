@@ -13,4 +13,8 @@ if (a < b) {
     }
 }
 
+if (a === b) {
+    result += a;
+}
+
 console.log(result);
