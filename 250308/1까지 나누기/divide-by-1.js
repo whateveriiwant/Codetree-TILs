@@ -4,7 +4,7 @@ let i = 1;
 let prod = n;
 
 while (true) {
-    prod /= i;
+    prod = parseInt(prod/i);
     if (prod <= 1) break;
     i++;
 }
