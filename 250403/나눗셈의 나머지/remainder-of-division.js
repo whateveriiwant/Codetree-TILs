@@ -4,13 +4,13 @@ let cnt = Array(b);
 cnt.fill(0);
 
 while (a > 1) {
-    a = parseInt(a / b);
     cnt[a % b]++;
+    a = parseInt(a / b);
 }
 
 let sum = 0;
-for (let i of cnt) {
-    sum += i*i;
+for (let i = 0; i < b; i++) {
+    sum += cnt[i] * cnt[i];
 }
 
 console.log(sum);
