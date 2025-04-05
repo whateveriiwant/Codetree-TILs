@@ -12,12 +12,13 @@ for (let i = 2; i < q + 2; i++) { // 질의 입력
         console.log(numbers[a - 1]);
     }
     else if (question[0] === 2) { // 2 b
-        const b = question[1];
+        const b = Number(question[1]);
         for (let j = 0; j < numbers.length; j++) {
             if (numbers[j] === b) {
                 console.log(j+1);
                 break;
             } 
+            console.log(0);
         }
     }
     else if (question[0] === 3) { // 3 c
