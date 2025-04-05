@@ -18,7 +18,6 @@ for (let i = 2; i < q + 2; i++) { // 질의 입력
                 console.log(j+1);
                 break;
             } 
-            console.log(0);
         }
     }
     else if (question[0] === 3) { // 3 c
