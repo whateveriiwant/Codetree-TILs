@@ -1,4 +1,4 @@
-const input = require("fs").readFileSync(0).toString().trim().split(" ")
+const input = require("fs").readFileSync(0).toString().trim().split("\n")
 
 const n = Number(input[0]);
 const prices = input[1].split(" ").map(Number);
