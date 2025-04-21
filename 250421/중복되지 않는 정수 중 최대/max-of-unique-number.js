@@ -16,5 +16,5 @@ for (let i = 1; i < n; i++) {
     }
 }
 
-if (cnt <= 1) console.log(max);
-else console.log(-1);
+if (cnt >= 1) console.log(-1);
+else console.log(max);
