@@ -9,10 +9,10 @@ numbers.sort((a, b) => (b - a));
 
 let max = numbers[0];
 
-for (let i of numbers) {
-    if (max === i) {
+for (let i = 1; i < n; i++) {
+    if (max === numbers[i]) {
         cnt++;
-        // max = numbers[cnt];
+        max = numbers[cnt+1];
     }
 }
 
