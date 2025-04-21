@@ -15,11 +15,15 @@ for (let i = 0; i < n; i++) {
 }
 
 result += (index1 + 1) + " ";
+let cnt = 0;
 
 for (let i = index1 - 1; i >= 0; i--) { // 최댓값 왼쪽 인덱스부터 시작
     let tmp = arr[i];
-    if (tmp === arr[i-1]) continue;
-    result += (i + 1) + " ";
+    if (tmp === arr[i-1]) {
+        cnt++;
+        continue;
+    }
+    if (cnt >= 1) result += (i + 1) + " ";
 }
 
 console.log(result);
