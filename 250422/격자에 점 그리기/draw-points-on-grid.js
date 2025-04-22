@@ -1,0 +1,19 @@
+const input = require("fs").readFileSync(0).toString().trim().split("\n");
+
+const [n, m] = input[0].split(" ").map(Number);
+let arr = Array(n).fill(0).map(() => Array(n).fill(0));
+let cnt = 1;
+
+for (let i = 1; i <= m; i++) {
+    const [r, c] = input[i].split(" ").map(Number);
+    arr[r-1][c-1] = cnt;
+    cnt++;
+}
+
+for (let i of arr) {
+    let str = "";
+    for (let j of i) {
+        str += j + " ";
+    }
+    console.log(str);
+}
