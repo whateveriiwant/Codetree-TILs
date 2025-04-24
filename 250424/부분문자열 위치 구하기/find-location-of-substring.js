@@ -11,4 +11,5 @@ for (let i = 0; i < inputStr.length - 1; i++) {
     }
 }
 
-console.log(idx);
+if (inputStr === findStr) console.log(0);
+else console.log(idx);
