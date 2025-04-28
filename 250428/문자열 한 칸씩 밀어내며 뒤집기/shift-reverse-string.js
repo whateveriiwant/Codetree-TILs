@@ -10,9 +10,7 @@ for (let i = 1; i <= q; i++) {
     } else if (request === 2) {
         str = str.slice(-1) + str.slice(0, -1);
     } else {
-        let arr = str.split("");
-        arr.reverse();
-        str = arr.join("");
+        str = str.split("").reverse().join("");
     }
     console.log(str);
 }
