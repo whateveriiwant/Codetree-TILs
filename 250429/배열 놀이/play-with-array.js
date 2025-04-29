@@ -21,7 +21,7 @@ for (let i = 2; i <= q+1; i++) {
                 break;
             } 
         }
-        console.log(index+1);
+        index !== 0 ? console.log(index+1) : console.log(index);
     } else {
         const s = question[1];
         const e = question[2];
