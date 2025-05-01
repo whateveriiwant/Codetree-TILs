@@ -7,7 +7,7 @@ const func = (m, d) => {
         if (d <= 31 && d >= 1) return true;
         else return false;
     } else if (m == 4 || m == 6 || m == 9 || m == 11) {
-        if (d <= 31 && d >= 1) return true;
+        if (d <= 30 && d >= 1) return true;
         else return false;
     } else if (m == 2) {
         if (d <= 28 && d >= 1) return true;
