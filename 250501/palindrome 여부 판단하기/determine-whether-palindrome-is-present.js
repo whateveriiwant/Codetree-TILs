@@ -1,12 +1,10 @@
-const fs = require("fs");
-const input = fs.readFileSync(0).toString().trim().split('\n');
-const str = input[0];
+const a = require("fs").readFileSync(0).toString().trim();
 
 const palindrome = (str) => {
-    if (str.slice(0, str.length/2) === str.split("").reverse().slice(str.length/2 + 1, str.length).join("")) {
-        return "Yes";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] !== str[str.length - i - 1]) return "No";
     }
-    return "No";
+    return "Yes";
 };
 
-console.log(palindrome(str));
+console.log(palindrome(a));
