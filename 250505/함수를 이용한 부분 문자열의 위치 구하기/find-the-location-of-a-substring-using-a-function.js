@@ -1,21 +1,19 @@
 const fs = require("fs");
 const input = fs.readFileSync(0).toString().trim().split("\n");
 
-const text = input[0].split("");
-const pattern = input[1].split("");
+const text = input[0];
+const pattern = input[1];
 
 const find = () => {
     let idx = -1;
     for (let i = 0; i < text.length; i++) {
-        if (text[i] === pattern[0]) {
-            for (let j = 0; j < pattern.length; j++) {
-                if (text[i+j] !== pattern[j]) break;
-            }
+        if (text.slice(i, i + pattern.length) === pattern) {
             idx = i;
+            break;
         }
     }
 
-    return idx === -1 ? -1 : idx - 1;
+    return idx;
 };
 
 console.log(find());
