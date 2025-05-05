@@ -8,8 +8,8 @@ const find = () => {
     let idx = -1;
     for (let i = 0; i < text.length; i++) {
         if (text[i] === pattern[0]) {
-            for (let j = 1; j < pattern.length; j++) {
-                if (text[j] !== pattern[j]) break;
+            for (let j = 0; j < pattern.length; j++) {
+                if (text[i+j] !== pattern[j]) break;
             }
             idx = i;
         }
