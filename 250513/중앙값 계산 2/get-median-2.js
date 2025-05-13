@@ -10,9 +10,10 @@ let result = "";
 
 for (let i = 0; i < n; i++) {
     resultArr.push(arr[i]);
-    if (arr[i] % 2 !== 0) {
+    if (i % 2 === 0) {
         resultArr.sort((a, b) => a - b);
-        result += resultArr[parseInt(resultArr.length / 2)] + ' ';
+        if (resultArr.length % 2 === 0) result += resultArr[parseInt(resultArr.length / 2) - 1] + ' ';
+        else result += resultArr[parseInt(resultArr.length / 2)] + ' ';
     }
 }
 
