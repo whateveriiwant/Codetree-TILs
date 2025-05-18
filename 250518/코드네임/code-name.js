@@ -19,6 +19,19 @@ class Agent {
 };
 
 const agents = [
-    Agent(code0, s0),
-    Agent(code0, s0),
+    new Agent(code0, score0),
+    new Agent(code1, score1),
+    new Agent(code2, score2),
+    new Agent(code3, score3),
+    new Agent(code4, score4)
 ];
+
+let min = agents[0];
+
+for (let i of agents) {
+    if (i.score < min.score) {
+        min = i;
+    }
+}
+
+console.log(`${min.code} ${min.score}`);
