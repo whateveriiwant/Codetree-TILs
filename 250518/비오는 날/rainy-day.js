@@ -17,6 +17,6 @@ for (let i = 1; i <= n; i++) {
     if (data.fc === "Rain") arr.push(data);
 }
 
-arr.sort();
+arr.sort((a, b) => a - b);
 
 console.log(arr[0].date, arr[0].weekday, arr[0].fc);
