@@ -12,9 +12,9 @@ const checked = Array(201).fill(0);
 for (let i of lines) {
     let x1 = i[0];
     let x2 = i[1];
-
-    if (x1 < 0) x1 += Math.abs(x1 * 2);
-    if (x2 < 0) x2 += Math.abs(x2 * 2);
+    x1 += 100;
+    x2 += 100;
+    
     for (let j = x1; j <= x2; j++) {
         checked[j] += 1;
     }
