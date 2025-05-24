@@ -21,7 +21,7 @@ for (let i of lines) {
 }
 
 let max = 1;
-for (let i = 0; i < 201; i++) {
+for (let i = 0; i < 200; i++) {
     if (checked[i] > max) {
         max = checked[i];
     }
