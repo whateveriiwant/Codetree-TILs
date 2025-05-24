@@ -14,17 +14,11 @@ for (let i of lines) {
     let x2 = i[1];
     x1 += 100;
     x2 += 100;
-    
-    for (let j = x1; j <= x2; j++) {
+
+    for (let j = x1; j < x2; j++) {
         checked[j] += 1;
     }
 }
 
-let max = 0;
-for (let i = 1; i < 200; i++) {
-    if (checked[i] > max) {
-        max = checked[i];
-    }
-}
-
+const max = Math.max(...checked);
 console.log(max);
