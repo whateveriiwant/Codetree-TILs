@@ -7,7 +7,7 @@ const arr = input.slice(1, n + 1).map(Number);
 let cnt = 1;
 let maxCnt = 1;
 
-for (let i = 0; i < n - 2; i++) {
+for (let i = 0; i < n - 1; i++) {
     if (arr[i] == arr[i + 1]) cnt++;
     else {
         maxCnt = Math.max(maxCnt, cnt);
