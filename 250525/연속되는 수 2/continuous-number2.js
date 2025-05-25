@@ -3,24 +3,16 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 
 const n = Number(input[0]);
 const arr = input.slice(1, n + 1).map(Number);
-const result = [];
 
-let cnt = 0;
+let cnt = 1;
+let maxCnt = 1;
 
-if (arr.length === 1) result.push(1);
-else {
-    for (let i = 0; i < arr.length - 2; i++) {
-        cnt = 0;
-        if (arr[i] === arr[i + 1]) {
-            cnt++;
-            for (let j = i + 1; j < arr.length - 2; j++) {
-                cnt++;
-                if (arr[j] !== arr[j + 1]) break;
-            }
-            result.push(cnt);
-        }
+for (let i = 0; i < n - 1; i++) {
+    if (arr[i] === arr[i + 1]) cnt++;
+    else {
+        maxCnt = Math.max(maxCnt, cnt);
+        cnt = 1;
     }
 }
 
-
-console.log(Math.max(...result));
+console.log(maxCnt);
