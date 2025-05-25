@@ -6,7 +6,10 @@ const arr = input.slice(1, n + 1).map(Number);
 const result = [];
 
 let cnt = 0;
-for (let i = 0; i < arr.length - 2; i++) {
+
+if (arr.length === 1) result.push(1);
+else {
+    for (let i = 0; i < arr.length - 2; i++) {
     cnt = 0;
     if (arr[i] === arr[i + 1]) {
         for (let j = i; j < arr.length - 2; j++) {
@@ -16,5 +19,7 @@ for (let i = 0; i < arr.length - 2; i++) {
         result.push(cnt);
     }
 }
+}
+
 
 console.log(Math.max(...result));
