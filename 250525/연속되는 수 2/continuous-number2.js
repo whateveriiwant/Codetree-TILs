@@ -9,17 +9,16 @@ let cnt = 0;
 
 if (arr.length === 1) result.push(1);
 else {
-    for (let i = 0; i < arr.length - 2; i++) {
-    cnt = 0;
-    if (arr[i] === arr[i + 1]) {
-        cnt++;
-        for (let j = i + 1; j < arr.length - 2; j++) {
-            cnt++;
-            if (arr[i] !== arr[i + 1]) break;
+    for (let i = 0; i < arr.length - 1; i++) {
+        cnt = 0;
+        if (arr[i] === arr[i + 1]) {
+            for (let j = i + 1; j < arr.length - 1; j++) {
+                cnt++;
+                if (arr[i] !== arr[i + 1]) break;
+            }
+            result.push(cnt);
         }
-        result.push(cnt);
     }
-}
 }
 
 
