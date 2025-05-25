@@ -14,4 +14,4 @@ for (let i = 0; i < n - 1; i++) {
     }
 }
 
-console.log(maxCnt);
+console.log(Math.max(maxCnt, cnt));
