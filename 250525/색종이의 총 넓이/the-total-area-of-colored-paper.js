@@ -8,7 +8,7 @@ const arr = Array(201).fill(0).map(() => Array(201).fill(0));
 const OFFSET = 100;
 
 for (let i = 0; i < n; i++) {
-    const [x1, y1] = rects[i].split(" ").map(Number);
+    const [x1, y1] = rects[i].map(Number);
     const [x2, y2] = [x1 + 8, y1 + 8];
 
     for (let j = x1; j < x2; j++) {
