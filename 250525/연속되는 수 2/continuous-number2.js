@@ -8,7 +8,7 @@ let cnt = 1;
 let maxCnt = 1;
 
 for (let i = 0; i < n - 1; i++) {
-    if (arr[i] === arr[i + 1]) cnt++;
+    if (arr[i] == arr[i + 1]) cnt++;
     else {
         maxCnt = Math.max(maxCnt, cnt);
         cnt = 1;
