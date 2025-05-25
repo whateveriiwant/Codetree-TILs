@@ -9,7 +9,7 @@ let cnt = 0;
 
 if (arr.length === 1) result.push(1);
 else {
-    for (let i = 0; i < arr.length - 2; i++) {
+    for (let i = 0; i < arr.length - 1; i++) {
     cnt = 0;
     if (arr[i] === arr[i + 1]) {
         for (let j = i; j < arr.length - 2; j++) {
