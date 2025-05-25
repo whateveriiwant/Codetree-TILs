@@ -4,11 +4,11 @@ const input = fs.readFileSync(0).toString().trim().split('\n');
 const rect1 = input[0].split(' ').map(Number);
 const rect2 = input[1].split(' ').map(Number);
 
-const arr = Array(2001).fill(0).map(() => Array(2001).fill(0));
+const arr = Array(2001).fill(null).map(() => Array(2001).fill(0));
 const OFFSET = 1000;
 
 for (let i = 0; i < 2; i++) {
-    const [x1, y1, x2, y2] = i === 0 ? rect1.map(Number) : rect2.map(Number);
+    const [x1, y1, x2, y2] = i === 0 ? rect1 : rect2;
 
     for (let j = x1; j < x2; j++) {
         for (let k = y1; k < y2; k++) {
