@@ -14,7 +14,7 @@ let disB = 0;
 for (let i of moveA) {
     const [v, t] = i.split(" ").map(Number);
 
-    for (let j = 1; j <= t; j++) {
+    for (let j = 0; j < t; j++) {
         disA += v;
         arrA.push(disA);
     }
@@ -23,11 +23,26 @@ for (let i of moveA) {
 for (let i of moveB) {
     const [v, t] = i.split(" ").map(Number);
 
-    for (let j = 1; j <= t; j++) {
+    for (let j = 0; j < t; j++) {
         disB += v;
         arrB.push(disB);
     }
 }
 
-console.log(arrA);
-console.log(arrB);
+let cnt = 0;
+let leader = 0; // 0 무승부, 1 A, 2 B
+for (let i = 1; i <= arrA.length; i++) {
+    if (arrA[i] > arrB[i]) {
+        if (leader !== 1) {
+            leader = 1;
+            cnt++;
+        }
+    } else if (arrA[i] < arrB[i]) {
+        if (leader !== 2) {
+            leader = 2;
+            cnt++;
+        }
+    }
+}
+
+console.log(cnt - 1);
