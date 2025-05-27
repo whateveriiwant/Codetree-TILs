@@ -31,18 +31,14 @@ for (let i of moveB) {
 
 let cnt = 0;
 let leader = 0; // 0 무승부, 1 A, 2 B
-for (let i = 1; i <= arrA.length; i++) {
+for (let i = 1; i < arrA.length; i++) {
     if (arrA[i] > arrB[i]) {
-        if (leader !== 1) {
-            leader = 1;
-            cnt++;
-        }
+        if (leader === 2) cnt++;
+        leader = 1;
     } else if (arrA[i] < arrB[i]) {
-        if (leader !== 2) {
-            leader = 2;
-            cnt++;
-        }
+        if (leader === 1) cnt++;
+        leader = 2;
     }
 }
 
-console.log(cnt - 1);
+console.log(cnt);
