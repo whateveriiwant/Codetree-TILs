@@ -5,43 +5,27 @@ const [n, m] = input[0].split(" ").map(Number);
 const moveA = input.slice(1, n + 1);
 const moveB = input.slice(n + 1, n + m + 1);
 
-const arrA = [];
+const arrA = [0];
 let locA = 0;
-arrA.push(locA);
 
-const arrB = [];
+const arrB = [0];
 let locB = 0;
-arrB.push(locB);
 
 for (let i of moveA) {
     const [d, t] = i.split(" ");
 
-    if (d == 'L') {
-        for (let j = 0; j < t; j++) {
-            locA--;
-            arrA.push(locA);
-        }
-    } else {
-        for (let j = 0; j < t; j++) {
-            locA++
-            arrA.push(locA);
-        }
+    for (let j = 0; j < t; j++) {
+        d == 'L' ? locA-- : locA++;
+        arrA.push(locA);
     }
 }
 
 for (let i of moveB) {
     const [d, t] = i.split(" ");
 
-    if (d == 'L') {
-        for (let j = 0; j < t; j++) {
-            locB--
-            arrB.push(locB);
-        }
-    } else {
-        for (let j = 0; j < t; j++) {
-            locB++
-            arrB.push(locB);
-        }
+    for (let j = 0; j < t; j++) {
+        d == 'L' ? locB-- : locB++;
+        arrB.push(locB);
     }
 }
 
