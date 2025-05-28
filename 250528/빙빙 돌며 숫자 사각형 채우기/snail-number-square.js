@@ -13,7 +13,7 @@ let arr = Array(n).fill(0).map(() => Array(m).fill(0));
 let dirNum = 0;
 
 const inRange = (x, y) => {
-    return x >= 0 && x < n && y >= 0 && y < n;
+    return x >= 0 && x < n && y >= 0 && y < m;
 };
 
 arr[x][y] = cnt;
@@ -26,7 +26,7 @@ while (cnt <= n * m) {
     if (inRange(nx, ny) && arr[nx][ny] === 0) { // 계속 움직이기
         x = nx;
         y = ny;
-        arr[x][y] += cnt;
+        arr[x][y] = cnt;
         cnt++;
     } else { // 방향 전환
         dirNum = (dirNum + 1) % 4;
