@@ -14,8 +14,8 @@ const inRange = (x, y) => {
 };
 
 for (let i = 0; i < n; i++) {
-    let cnt = 0;
     for (let j = 0; j < n; j++) {
+        let cnt = 0;
         for (let dirNum = 0; dirNum < 4; dirNum++) {
             const nx = i + dx[dirNum];
             const ny = j + dy[dirNum];
