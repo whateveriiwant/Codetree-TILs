@@ -48,9 +48,9 @@ while (true) {
     x += dx[dirNum];
     y += dy[dirNum];
 
-    cnt++;
-
     if (x < 0 || x > n || y < 0 || y > n) break;
+
+    cnt++;
 
     if (arr[x][y] === '/') {
         if (dirNum === 1) dirNum = 0;
