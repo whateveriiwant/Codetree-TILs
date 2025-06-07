@@ -10,7 +10,7 @@ let dirNum = 0;
 let x = parseInt(n / 2), y = parseInt(n / 2);
 
 const inRange = (x, y) => {
-    return x >= 0 && x < n && y >= 0 && y < m;
+    return x >= 0 && x < n && y >= 0 && y < n;
 };
 
 let sum = 0;
