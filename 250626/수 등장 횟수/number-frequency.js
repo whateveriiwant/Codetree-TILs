@@ -7,17 +7,17 @@ const queries = input[2].split(' ').map(Number); // m개의 수: m번에 걸쳐 
 
 const map = new Map();
 
-for (let i = 0; i < n; i++) {
-    map.set(i, arr[i]);
-}
+arr.forEach(x => { // 각 숫자가 몇 번씩 나왔는지 HashMap에 기록
+    if (map.has(x)) map.set(x, map.get(x) + 1);
+    else map.set(x, 1);
+});
+
+// m개의 질의에 대해 몇 번씩 나왔는지?
 
 let result = "";
-for (let i = 0; i < m; i++) {
-    let cnt = 0;
-    for (let j = 0; j < n; j++) {   
-        if (map.get(j) !== undefined && map.get(j) === queries[i]) cnt++;
-    }
-    result += cnt + ' ';
-}
+queries.forEach(x => {
+    if (map.has(x)) result += `${map.get(x)} `;
+    else result += `0 `;
+});
 
 console.log(result);
