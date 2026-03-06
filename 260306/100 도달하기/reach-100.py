@@ -8,4 +8,4 @@ while True:
     arr.append(new_val)
 
 for i in arr:
-    print(i, end =)
+    print(i, end = ' ')
